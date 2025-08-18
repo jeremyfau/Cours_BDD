@@ -37,8 +37,16 @@ def deplacer_dans_repertoire(context, CoursBDD):
 
 @When ("J'affiche le contenu avec {cmd}")
 def afficher_contenu(context, cmd):
+
+    # print(f"Nb Enregistrement Table : {len(context.table)}")
+
     print(f"J'affiche le contenu avec {cmd}")
     logger.info(f"J'affiche le contenu avec {cmd}")
+
+    # Affichage du tableau le fichier log
+    for row in context.table:
+        logger.info(f"J'affiche le contenu : {row['Type']} {row['Nom']}")
+
     time.sleep(2)
 
 
