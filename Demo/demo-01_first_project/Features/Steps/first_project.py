@@ -20,19 +20,22 @@ file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
 
-@given ("J'ouvre mon terminal {shell}")
-def open_terminal(context, shell):
+
+
+
+@given ("J'ouvre mon terminal {Shell}")
+def open_terminal(context, Shell):
     # Print pour savoir ou on en est
-    print(f"J'ouvre mon terminal {shell}")
+    print(f"J'ouvre mon terminal {Shell}")
     # Enregistrement des évenements de la fonction
-    logger.info(f"J'ouvre mon terminal {shell}")
+    logger.info(f"J'ouvre mon terminal {Shell}")
     # Fonction pour ralentir le process
     time.sleep(2)
 
-@when ("Je me déplace dans le répertoire : {CoursBDD}")
-def deplacer_dans_repertoire(context, CoursBDD):
-    print(f"Je me déplace dans le répertoire : {CoursBDD}")
-    logger.info(f"Je me déplace dans le répertoire : {CoursBDD}")
+@when ("Je me déplace dans le répertoire : {Path}")
+def deplacer_dans_repertoire(context, Path):
+    print(f"Je me déplace dans le répertoire : {Path}")
+    logger.info(f"Je me déplace dans le répertoire : {Path}")
     time.sleep(2)
 
 @When ("J'affiche le contenu avec {cmd}")
@@ -43,7 +46,7 @@ def afficher_contenu(context, cmd):
     print(f"J'affiche le contenu avec {cmd}")
     logger.info(f"J'affiche le contenu avec {cmd}")
 
-    # Affichage du tableau le fichier log
+    # Affichage du tableau simple
     for row in context.table:
         logger.info(f"J'affiche le contenu : {row['Type']} {row['Nom']}")
 
