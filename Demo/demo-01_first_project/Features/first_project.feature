@@ -5,7 +5,7 @@ Feature: Mon premier projet 800
   Scenario: Test de mon premier scénario
 
     Given J'ouvre mon terminal "Powershell"
-    When Je me déplace dans le répertoire : C:\Users\T1000 et plus\Desktop\Formation ENI\Cours BDD
-    And J'affiche le contenu avec 'dir'
+    When Je me déplace dans le répertoire : "C:\Users\T1000 et plus\Desktop\Formation ENI\Cours BDD"
+    And J'affiche le contenu avec "dir"
     And Je regarde le contenu du répertoire
     Then Je ferme le répertoire

@@ -29,16 +29,16 @@ def open_terminal(context, shell):
     # Fonction pour ralentir le process
     time.sleep(2)
 
-@when ("Je me déplace dans le répertoire : C:\\Users\T1000 et plus\Desktop\Formation ENI\Cours BDD")
-def deplacer_dans_repertoire(context):
-    print("Je me déplace dans le répertoire : C:\\Users\T1000 et plus\Desktop\Formation ENI\Cours BDD")
-    logger.info("Je me déplace dans le répertoire : C:\\Users\T1000 et plus\Desktop\Formation ENI\Cours BDD")
+@when ("Je me déplace dans le répertoire : {CoursBDD}")
+def deplacer_dans_repertoire(context, CoursBDD):
+    print(f"Je me déplace dans le répertoire : {CoursBDD}")
+    logger.info(f"Je me déplace dans le répertoire : {CoursBDD}")
     time.sleep(2)
 
-@When ("J'affiche le contenu avec 'dir'")
-def afficher_contenu(context):
-    print("J'affiche le contenu avec 'dir'")
-    logger.info("J'affiche le contenu avec 'dir'")
+@When ("J'affiche le contenu avec {cmd}")
+def afficher_contenu(context, cmd):
+    print(f"J'affiche le contenu avec {cmd}")
+    logger.info(f"J'affiche le contenu avec {cmd}")
     time.sleep(2)
 
 
