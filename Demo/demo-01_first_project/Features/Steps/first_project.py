@@ -20,12 +20,12 @@ file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
 
-@given ("J'ouvre mon terminal")
-def open_terminal(context):
+@given ("J'ouvre mon terminal {shell}")
+def open_terminal(context, shell):
     # Print pour savoir ou on en est
-    print("J'ouvre mon terminal")
+    print(f"J'ouvre mon terminal {shell}")
     # Enregistrement des évenements de la fonction
-    logger.info("J'ouvre mon terminal")
+    logger.info(f"J'ouvre mon terminal {shell}")
     # Fonction pour ralentir le process
     time.sleep(2)
 
