@@ -4,8 +4,8 @@ Feature: Mon premier projet 800
 
 Background:
 
-    Given J'ouvre mon terminal "<Shell>"
-    When Je me déplace dans le répertoire : "<Path>"
+    Given J'ouvre mon terminal "<shell>"
+    When Je me déplace dans le répertoire : "<path>"
     And J'affiche le contenu avec "dir"
       |Type       |Nom      |Poids  |
       |Directory  |Rep01    |254    |
