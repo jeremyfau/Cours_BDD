@@ -17,6 +17,7 @@ Background:
     Then Je ferme le répertoire
 
 #Début scénario 1
+  @demo1 @alldemo
   Scenario Outline: Test de mon premier scénario
 
 #    Given J'ouvre mon terminal "<Shell>"
@@ -28,7 +29,8 @@ Background:
       |pwsh       |PS:/users/yoda |
 
 # Début scénario 2
-  Scenario Outline: Démo 5 - Manipulation du background #1
+  @demo5-1 @alldemo
+  Scenario Outline: Démo 5-1 - Manipulation du background #1
 
 #    Given J'ouvre mon terminal "<Shell>"
 #    When Je me déplace dans le répertoire : "/home"
@@ -37,10 +39,14 @@ Background:
       |bash       |/home/yoda     |
 
 # Début scénario 3
-  Scenario Outline: Démo 5 - Manipulation du background #2
+  @demo5-2 @alldemo
+  Scenario Outline: Démo 5-2 - Manipulation du background #2
 
 #    Given J'ouvre mon terminal "<Shell>"
 #    When Je me déplace dans le répertoire : "<Path>"
     Examples:
       |Shell      |Path           |
       |pwsh       |PS:/users/yoda |
+
+  @demo5-3 @alldemo @demo3
+  Scenario Outline: Démo 5-3 - Manipulation du background #2
